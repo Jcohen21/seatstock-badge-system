@@ -25,19 +25,24 @@ const TIERS = [
     name: "Bronze",
     tagline: "Welcome to the student section.",
     points: 0,
-    pointsLabel: "0 pts — automatic on signup",
+    pointsLabel: "0 pts — unlocks when profile is complete",
     color: "#CD7F32",
     bgGradient: "linear-gradient(135deg, #1a0e00 0%, #2a1800 100%)",
     emoji: "🥉",
     badgeStyle: { background: "#1a0e00", border: "2px solid #CD7F32" },
     rewards: [
-      { icon: "✅", label: "Profile badge unlocked", detail: "Bronze ring on your profile" },
-      { icon: "🏟️", label: "Platform access", detail: "Browse, buy, and list tickets" },
-      { icon: "📧", label: ".edu verified", detail: "Your seat in the verified student community" },
+      { icon: "📸", label: "Profile photo (PFP)", detail: "Upload a profile picture to unlock" },
+      { icon: "📧", label: ".edu verified", detail: "Verify your student email address" },
+      { icon: "📱", label: "Phone number verified", detail: "Confirm your phone number" },
+      { icon: "👤", label: "Username set", detail: "Choose your SeatStock username" },
+      { icon: "✅", label: "Bronze badge unlocked", detail: "Bronze ring on your profile + full platform access" },
     ],
     howToEarn: [
-      "Complete profile setup (username, photo, email, phone)",
-      "Awarded automatically — no transactions required",
+      "Set your profile photo (PFP)",
+      "Verify your .edu email address",
+      "Verify your phone number",
+      "Choose a username",
+      "Complete all 4 to unlock Bronze — no transactions required",
     ],
   },
   {
@@ -52,8 +57,7 @@ const TIERS = [
     badgeStyle: { background: "#1a1a1a", border: "2px solid #C0C0C0" },
     rewards: [
       { icon: "🥇", label: "Silver profile ring", detail: "Visible on your profile and listings" },
-      { icon: "🏷️", label: "1 fee-free listing/month", detail: "List one ticket with 0% take rate" },
-      { icon: "🎁", label: "SeatStock sticker pack", detail: "Shipped to your campus address" },
+      { icon: "🏷️", label: "1 fee-free buy/sell", detail: "One fee-free transaction — expires 2 weeks after unlock" },
     ],
     howToEarn: [
       "Buy a ticket: +30 pts",
@@ -76,7 +80,7 @@ const TIERS = [
     rewards: [
       { icon: "🔴", label: "Gold profile ring", detail: "Gold ring on your profile and listings" },
       { icon: "📉", label: "9% take rate", detail: "Down from standard 10% on every sale" },
-      { icon: "⏰", label: "Early listing access", detail: "+15 min head start on new drops" },
+      { icon: "📌", label: "Priority listing placement", detail: "Your tickets surface higher in search — sell faster" },
       { icon: "👕", label: "SeatStock tee", detail: "Campus-specific colorway, shipped free" },
     ],
     howToEarn: [
@@ -187,9 +191,9 @@ const POINT_EVENTS = [
 ];
 
 const SUMMARY_ROWS = [
-  { tier: "Bronze", pts: "Auto", rate: "10%", perk: "Platform access", emoji: "🥉", color: "#CD7F32" },
-  { tier: "Silver", pts: "100", rate: "10%", perk: "1 free listing/mo + stickers", emoji: "🥈", color: "#C0C0C0" },
-  { tier: "Gold", pts: "400", rate: "9%", perk: "Early access +15 min + tee", emoji: "🥇", color: "#FFD700" },
+  { tier: "Bronze", pts: "Auto", rate: "10%", perk: "Complete profile to unlock", emoji: "🥉", color: "#CD7F32" },
+  { tier: "Silver", pts: "100", rate: "10%", perk: "1 fee-free buy/sell (2-wk expiry)", emoji: "🥈", color: "#C0C0C0" },
+  { tier: "Gold", pts: "400", rate: "9%", perk: "Priority listing placement + tee", emoji: "🥇", color: "#FFD700" },
   { tier: "Obsidian", pts: "1,000", rate: "8.5%", perk: "Early access +30 min + hat", emoji: "🔮", color: "#9B8EC4" },
   { tier: "Platinum", pts: "2,500", rate: "8%", perk: "Hoodie + Spotlight eligible", emoji: "🏅", color: "#E5E4E2" },
   { tier: "Diamond", pts: "6,000", rate: "5%", perk: "Animated badge + unlimited free listings", emoji: "💎", color: "#A8EDFF" },
