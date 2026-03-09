@@ -30,121 +30,119 @@ const TIERS = [
     bgGradient: "linear-gradient(135deg, #1a0e00 0%, #2a1800 100%)",
     emoji: "🥉",
     badgeStyle: { background: "#1a0e00", border: "2px solid #CD7F32" },
+    feeRate: "10%",
     rewards: [
-      { icon: "📸", label: "Profile photo (PFP)", detail: "Upload a profile picture to unlock" },
-      { icon: "📧", label: ".edu verified", detail: "Verify your student email address" },
-      { icon: "📱", label: "Phone number verified", detail: "Confirm your phone number" },
-      { icon: "👤", label: "Username set", detail: "Choose your SeatStock username" },
-      { icon: "✅", label: "Bronze badge unlocked", detail: "Bronze ring on your profile + full platform access" },
+      { icon: "🥉", label: "Bronze profile ring", detail: "Bronze ring on your profile and listings" },
     ],
     howToEarn: [
       "Set your profile photo (PFP)",
       "Verify your .edu email address",
       "Verify your phone number",
       "Choose a username",
-      "Complete all 4 to unlock Bronze — no transactions required",
+      "Complete all 4 to unlock Bronze — no exchanges required",
     ],
   },
   {
     id: 1,
     name: "Silver",
     tagline: "You showed up. Now stay.",
-    points: 100,
-    pointsLabel: "100 pts to unlock",
+    points: 75,
+    pointsLabel: "75 pts to unlock",
     color: "#C0C0C0",
     bgGradient: "linear-gradient(135deg, #141414 0%, #1e1e1e 100%)",
     emoji: "🥈",
     badgeStyle: { background: "#1a1a1a", border: "2px solid #C0C0C0" },
+    feeRate: "10%",
     rewards: [
-      { icon: "🥇", label: "Silver profile ring", detail: "Visible on your profile and listings" },
-      { icon: "🏷️", label: "1 fee-free buy/sell", detail: "One fee-free transaction — expires 2 weeks after unlock" },
+      { icon: "🥈", label: "Silver profile ring", detail: "Visible on your profile and listings" },
+      { icon: "📌", label: "Priority listing above Bronze", detail: "Your tickets surface higher than Bronze users" },
     ],
     howToEarn: [
-      "Buy a ticket: +30 pts",
-      "List a ticket: +20 pts",
-      "Complete a sale: +40 pts",
-      "Refer a friend who signs up: +25 pts",
-      "Daily app open streak (7 days): +10 pts",
+      "Complete your profile: +50 pts (one-time)",
+      "Leave your first review: +25 pts (one-time)",
+      "Profile completion alone unlocks Silver",
     ],
   },
   {
     id: 2,
     name: "Gold",
     tagline: "You're not just a fan. You're a regular.",
-    points: 400,
-    pointsLabel: "400 pts to unlock",
+    points: 300,
+    pointsLabel: "300 pts to unlock",
     color: "#FFD700",
     bgGradient: "linear-gradient(135deg, #1a1400 0%, #2a2000 100%)",
     emoji: "🥇",
     badgeStyle: { background: "#1a1400", border: "2px solid #FFD700" },
+    feeRate: "9%",
     rewards: [
-      { icon: "🔴", label: "Gold profile ring", detail: "Gold ring on your profile and listings" },
-      { icon: "📉", label: "9% take rate", detail: "Down from standard 10% on every sale" },
-      { icon: "📌", label: "Priority listing placement", detail: "Your tickets surface higher in search — sell faster" },
-      { icon: "👕", label: "SeatStock tee", detail: "Campus-specific colorway, shipped free" },
+      { icon: "🥇", label: "Gold profile ring", detail: "Gold ring on your profile and listings" },
+      { icon: "📉", label: "9% take rate", detail: "Down from standard 10% on every exchange" },
+      { icon: "📌", label: "Priority listing above Silver / Bronze", detail: "Your tickets surface higher in search — sell faster" },
     ],
     howToEarn: [
-      "All Silver point sources still apply",
-      "Sell 3+ tickets in one season: +50 bonus pts",
-      "5-star seller rating: +30 pts per review",
-      "List within 24h of game announcement: +15 pts",
+      "Buy a ticket: +50 pts",
+      "Sell a ticket: +50 pts",
+      "Refer a friend who exchanges: +25 pts",
+      "Leave a review: +10 pts",
+      "5 completed exchanges milestone: +50 pts",
     ],
   },
   {
     id: 3,
     name: "Obsidian",
     tagline: "Your section runs through you.",
-    points: 1000,
-    pointsLabel: "1,000 pts to unlock",
+    points: 900,
+    pointsLabel: "900 pts to unlock",
     color: "#9B8EC4",
     bgGradient: "linear-gradient(135deg, #0d0b14 0%, #16122a 100%)",
     emoji: "🔮",
     badgeStyle: { background: "#0d0b14", border: "2px solid #9B8EC4" },
+    feeRate: "8%",
     rewards: [
-      { icon: "🟢", label: "Obsidian profile ring", detail: "Deep purple Obsidian ring — rare and distinctive" },
-      { icon: "📉", label: "8.5% take rate", detail: "1.5 points below standard — applies to all sales" },
-      { icon: "🎟️", label: "3 fee-free listings/month", detail: "Triple the Silver allotment" },
-      { icon: "⏰", label: "Early listing access", detail: "+30 min head start on new drops" },
+      { icon: "🔮", label: "Obsidian profile ring", detail: "Deep purple Obsidian ring — rare and distinctive" },
+      { icon: "📉", label: "8% take rate", detail: "2% below standard — applies to all exchanges" },
+      { icon: "🎟️", label: "1 fee-free exchange/month", detail: "One exchange per month with zero fees" },
       { icon: "🧢", label: "SeatStock hat", detail: "Limited campus colorway, not sold in store" },
     ],
     howToEarn: [
-      "All lower-tier point sources still apply",
-      "Recruit a Campus Growth Rep: +100 pts",
-      "Hit 10 completed sales lifetime: +75 pts",
-      "Perfect transaction streak (no disputes, 30 days): +40 pts",
+      "Buy a ticket: +50 pts",
+      "Sell a ticket: +50 pts",
+      "Refer a friend who exchanges: +25 pts",
+      "Leave a review: +10 pts",
+      "5 completed exchanges milestone: +50 pts",
     ],
   },
   {
     id: 4,
     name: "Platinum",
     tagline: "You don't just go to games. You run the market.",
-    points: 2500,
-    pointsLabel: "2,500 pts to unlock",
+    points: 2200,
+    pointsLabel: "2,200 pts to unlock",
     color: "#E5E4E2",
     bgGradient: "linear-gradient(135deg, #111111 0%, #1c1c1c 100%)",
     emoji: "🏅",
     badgeStyle: { background: "#161616", border: "2px solid #E5E4E2" },
+    feeRate: "7%",
     rewards: [
-      { icon: "🌲", label: "Platinum profile ring + glow", detail: "Platinum ring + subtle glow — less than 2% of users ever reach this" },
-      { icon: "📉", label: "8% take rate", detail: "2% below standard rate" },
-      { icon: "🎟️", label: "5 fee-free listings/month", detail: "Unlimited during rivalry week" },
-      { icon: "⏰", label: "Early listing access", detail: "+60 min head start — first look at every drop" },
-      { icon: "👟", label: "SeatStock hoodie", detail: "The full kit. Campus-exclusive colorway." },
-      { icon: "⭐", label: "Student Spotlight eligible", detail: "Featured on SeatStock social and email blasts" },
+      { icon: "✨", label: "Platinum profile ring + glow", detail: "Platinum ring + subtle glow — less than 3% of users ever reach this" },
+      { icon: "📉", label: "7% take rate", detail: "3% below standard rate" },
+      { icon: "🎟️", label: "2 fee-free exchanges/month", detail: "Two exchanges per month with zero fees" },
+      { icon: "📦", label: "SeatStock care package", detail: "Exclusive merch bundle shipped to your door" },
     ],
     howToEarn: [
-      "All lower-tier point sources still apply",
-      "Top 3 seller at your school in a month: +150 pts",
-      "25 completed sales lifetime: +200 pts",
-      "Zero disputes in a full season: +100 pts",
+      "Buy a ticket: +50 pts",
+      "Sell a ticket: +50 pts",
+      "Refer a friend who exchanges: +25 pts",
+      "Leave a review: +10 pts",
+      "25 completed exchanges milestone: +200 pts",
     ],
   },
   {
     id: 5,
     name: "Diamond",
     tagline: "Built different. The student section knows your name.",
-    points: 6000,
-    pointsLabel: "6,000 pts to unlock",
+    points: 5000,
+    pointsLabel: "5,000 pts to unlock",
     color: "#A8EDFF",
     bgGradient: "linear-gradient(135deg, #001520 0%, #0f0f0f 50%, #001520 100%)",
     emoji: "💎",
@@ -153,50 +151,44 @@ const TIERS = [
       border: "2px solid #A8EDFF",
       boxShadow: "0 0 20px rgba(168, 237, 255, 0.35)",
     },
+    feeRate: "5%",
     rewards: [
       { icon: "👑", label: "Animated Diamond badge + ice blue ring", detail: "The only animated badge on the platform — ice blue glow" },
       { icon: "📉", label: "5% take rate", detail: "Half of standard. Locked in for the season." },
-      { icon: "∞", label: "Unlimited fee-free listings", detail: "No cap. Every listing, every game." },
-      { icon: "⏰", label: "Early listing access", detail: "+90 min head start — first on every drop" },
-      { icon: "📦", label: "Full Diamond merch kit", detail: "Hoodie + hat + exclusive Diamond-only colorway" },
-      { icon: "📞", label: "Direct line to Josh", detail: "Real feedback channel. You helped build this." },
+      { icon: "🎟️", label: "5 fee-free exchanges/month", detail: "Five exchanges per month with zero fees" },
+      { icon: "📦", label: "SeatStock Diamond care package", detail: "Premium merch bundle — Diamond-exclusive colorway" },
+      { icon: "📞", label: "Direct communication with founders", detail: "Real feedback channel. You helped build this." },
       { icon: "🏆", label: "Permanent school leaderboard", detail: "Your name on the wall. Forever." },
     ],
     howToEarn: [
-      "Top seller at your school for a full season: +500 pts",
-      "50 completed sales lifetime: +400 pts",
-      "Referred 5+ active users: +250 pts",
-      "Josh's discretionary award: invite only",
+      "Buy a ticket: +50 pts",
+      "Sell a ticket: +50 pts",
+      "Refer a friend who exchanges: +25 pts",
+      "Leave a review: +10 pts",
+      "50 completed exchanges milestone: +400 pts",
     ],
   },
 ];
 
 const POINT_EVENTS = [
-  { action: "Complete a purchase", pts: 30, category: "buyer" },
-  { action: "List a ticket", pts: 20, category: "seller" },
-  { action: "Complete a sale", pts: 40, category: "seller" },
-  { action: "Receive a 5-star rating", pts: 30, category: "seller" },
-  { action: "Refer a friend (they sign up)", pts: 25, category: "both" },
-  { action: "Refer a friend (they transact)", pts: 50, category: "both" },
-  { action: "7-day app open streak", pts: 10, category: "both" },
-  { action: "List within 24h of game announcement", pts: 15, category: "seller" },
-  { action: "Sell 3+ tickets in one season", pts: 50, category: "seller" },
-  { action: "10 completed sales (lifetime)", pts: 75, category: "seller" },
-  { action: "25 completed sales (lifetime)", pts: 200, category: "seller" },
-  { action: "50 completed sales (lifetime)", pts: 400, category: "seller" },
-  { action: "Perfect season (no disputes)", pts: 100, category: "both" },
-  { action: "Recruit a Campus Growth Rep", pts: 100, category: "both" },
-  { action: "Top 3 seller at your school (monthly)", pts: 150, category: "seller" },
-  { action: "Top seller at your school (full season)", pts: 500, category: "seller" },
+  { action: "Complete your profile", pts: 50, category: "onetime", detail: "PFP, .edu, phone, username" },
+  { action: "Leave your first review", pts: 25, category: "onetime", detail: "One-time bonus" },
+  { action: "Buy a ticket", pts: 50, category: "buyer", detail: "Every purchase" },
+  { action: "Sell a ticket", pts: 50, category: "seller", detail: "Every completed sale" },
+  { action: "Refer a friend who exchanges", pts: 25, category: "both", detail: "Friend must complete a transaction" },
+  { action: "Leave a review", pts: 10, category: "both", detail: "After every exchange" },
+  { action: "5 completed exchanges", pts: 50, category: "milestone", detail: "One-time milestone" },
+  { action: "25 completed exchanges", pts: 200, category: "milestone", detail: "One-time milestone" },
+  { action: "50 completed exchanges", pts: 400, category: "milestone", detail: "One-time milestone" },
 ];
 
 const SUMMARY_ROWS = [
-  { tier: "Bronze", pts: "Auto", rate: "10%", perk: "Complete profile to unlock", emoji: "🥉", color: "#CD7F32" },
-  { tier: "Silver", pts: "100", rate: "10%", perk: "1 fee-free buy/sell (2-wk expiry)", emoji: "🥈", color: "#C0C0C0" },
-  { tier: "Gold", pts: "400", rate: "9%", perk: "Priority listing placement + tee", emoji: "🥇", color: "#FFD700" },
-  { tier: "Obsidian", pts: "1,000", rate: "8.5%", perk: "Early access +30 min + hat", emoji: "🔮", color: "#9B8EC4" },
-  { tier: "Platinum", pts: "2,500", rate: "8%", perk: "Hoodie + Spotlight eligible", emoji: "🏅", color: "#E5E4E2" },
-  { tier: "Diamond", pts: "6,000", rate: "5%", perk: "Animated badge + unlimited free listings", emoji: "💎", color: "#A8EDFF" },
+  { tier: "Bronze", pts: "Auto", rate: "10%", perk: "Bronze profile ring", emoji: "🥉", color: "#CD7F32" },
+  { tier: "Silver", pts: "75", rate: "10%", perk: "Priority listing above Bronze", emoji: "🥈", color: "#C0C0C0" },
+  { tier: "Gold", pts: "300", rate: "9%", perk: "Priority listing above Silver/Bronze", emoji: "🥇", color: "#FFD700" },
+  { tier: "Obsidian", pts: "900", rate: "8%", perk: "1 fee-free exchange/mo + hat", emoji: "🔮", color: "#9B8EC4" },
+  { tier: "Platinum", pts: "2,200", rate: "7%", perk: "2 fee-free exchanges/mo + care package", emoji: "🏅", color: "#E5E4E2" },
+  { tier: "Diamond", pts: "5,000", rate: "5%", perk: "5 fee-free exchanges/mo + Diamond care package", emoji: "💎", color: "#A8EDFF" },
 ];
 
 function SeatStockBadgeSystem() {
@@ -208,6 +200,24 @@ function SeatStockBadgeSystem() {
     filterCategory === "all"
       ? POINT_EVENTS
       : POINT_EVENTS.filter((e) => e.category === filterCategory || e.category === "both");
+
+  const categoryLabel = (cat) => {
+    if (cat === "onetime") return "One-Time";
+    if (cat === "buyer") return "Buyer";
+    if (cat === "seller") return "Seller";
+    if (cat === "milestone") return "Milestone";
+    if (cat === "both") return "Buyer + Seller";
+    return cat;
+  };
+
+  const categoryColor = (cat) => {
+    if (cat === "onetime") return "#E34D31";
+    if (cat === "buyer") return "#4a90e2";
+    if (cat === "seller") return "#1DB954";
+    if (cat === "milestone") return "#FFD700";
+    if (cat === "both") return "#E34D31";
+    return "#555";
+  };
 
   return (
     <div style={{ fontFamily: "'Outfit', 'Inter', sans-serif", background: "#0F0F0F", minHeight: "100vh", color: "#F5F3F0" }}>
@@ -281,7 +291,7 @@ function SeatStockBadgeSystem() {
 
           <div style={{ marginTop: 20, padding: 16, background: "#1a0800", borderRadius: 10, border: "1px solid #E34D3133" }}>
             <div style={{ fontSize: 10, letterSpacing: 2, color: "#E34D31", fontWeight: 700, marginBottom: 6, textTransform: "uppercase" }}>⚠️ Annual Reset</div>
-            <div style={{ fontSize: 12, color: "#666", lineHeight: 1.7 }}>Points reset each August 1st. Badge color and tier name are kept permanently as prestige markers. Active rewards (fee discounts, free listings) require re-earning each year.</div>
+            <div style={{ fontSize: 12, color: "#666", lineHeight: 1.7 }}>Points reset each August 1st. Badge color and tier name are kept permanently as prestige markers. Active rewards (fee discounts, free exchanges) require re-earning each year.</div>
           </div>
         </div>
       )}
@@ -289,8 +299,8 @@ function SeatStockBadgeSystem() {
       {/* POINT EVENTS */}
       {activeTab === "points" && (
         <div style={{ padding: "24px 16px", maxWidth: 720, margin: "0 auto" }}>
-          <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
-            {[["all", "All"], ["buyer", "Buyers"], ["seller", "Sellers"]].map(([cat, label]) => (
+          <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
+            {[["all", "All"], ["onetime", "One-Time"], ["buyer", "Buyers"], ["seller", "Sellers"], ["milestone", "Milestones"]].map(([cat, label]) => (
               <button key={cat} onClick={() => setFilterCategory(cat)} style={{ padding: "7px 16px", borderRadius: 6, border: filterCategory === cat ? "none" : "1px solid #2a2a2a", background: filterCategory === cat ? "#E34D31" : "transparent", color: filterCategory === cat ? "#fff" : "#555", fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", cursor: "pointer" }}>
                 {label}
               </button>
@@ -301,8 +311,11 @@ function SeatStockBadgeSystem() {
               <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "13px 16px", background: "#1a1a1a", borderRadius: 8, border: "1px solid #222" }}>
                 <div>
                   <div style={{ fontSize: 13, fontWeight: 600 }}>{event.action}</div>
-                  <div style={{ fontSize: 10, marginTop: 3, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", color: event.category === "buyer" ? "#4a90e2" : event.category === "seller" ? "#1DB954" : "#E34D31" }}>
-                    {event.category === "both" ? "Buyer + Seller" : event.category}
+                  <div style={{ display: "flex", gap: 8, alignItems: "center", marginTop: 3 }}>
+                    <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", color: categoryColor(event.category) }}>
+                      {categoryLabel(event.category)}
+                    </span>
+                    {event.detail && <span style={{ fontSize: 10, color: "#444" }}>· {event.detail}</span>}
                   </div>
                 </div>
                 <div style={{ fontSize: 18, fontWeight: 900, color: "#E34D31" }}>+{event.pts}</div>
@@ -339,13 +352,23 @@ function SeatStockBadgeSystem() {
 
           <div style={{ padding: 16, background: "#1a1a1a", borderRadius: 10, border: "1px solid #222", marginBottom: 14 }}>
             <div style={{ fontSize: 10, letterSpacing: 2, color: "#E34D31", fontWeight: 700, marginBottom: 12, textTransform: "uppercase" }}>Take Rate Savings</div>
-            {[["Bronze + Silver", "10%", null], ["Gold", "9%", "Save 1%"], ["Obsidian", "8.5%", "Save 1.5%"], ["Platinum", "8%", "Save 2%"], ["Diamond", "5%", "Save 5%"]].map(([tier, rate, save], i, arr) => (
+            {[["Bronze + Silver", "10%", null], ["Gold", "9%", "Save 1%"], ["Obsidian", "8%", "Save 2%"], ["Platinum", "7%", "Save 3%"], ["Diamond", "5%", "Save 5%"]].map(([tier, rate, save], i, arr) => (
               <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: i < arr.length - 1 ? "1px solid #222" : "none" }}>
                 <span style={{ fontSize: 12, color: "#777" }}>{tier}</span>
                 <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
                   <span style={{ fontSize: 13, fontWeight: 700 }}>{rate}</span>
                   {save && <span style={{ fontSize: 10, color: "#1DB954", fontWeight: 700 }}>{save}</span>}
                 </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ padding: 16, background: "#1a1a1a", borderRadius: 10, border: "1px solid #222", marginBottom: 14 }}>
+            <div style={{ fontSize: 10, letterSpacing: 2, color: "#E34D31", fontWeight: 700, marginBottom: 12, textTransform: "uppercase" }}>User Distribution Target</div>
+            {[["Bronze", "45%", "#CD7F32"], ["Silver", "27%", "#C0C0C0"], ["Gold", "17%", "#FFD700"], ["Obsidian", "6.5%", "#9B8EC4"], ["Platinum", "3%", "#E5E4E2"], ["Diamond", "0.5%", "#A8EDFF"]].map(([tier, pct, color], i, arr) => (
+              <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: i < arr.length - 1 ? "1px solid #222" : "none" }}>
+                <span style={{ fontSize: 12, color: color }}>{tier}</span>
+                <span style={{ fontSize: 13, fontWeight: 700 }}>{pct}</span>
               </div>
             ))}
           </div>
@@ -362,7 +385,7 @@ function SeatStockBadgeSystem() {
       )}
 
       <div style={{ textAlign: "center", padding: "28px 16px", borderTop: "1px solid #1a1a1a", marginTop: 8 }}>
-        <div style={{ fontSize: 10, color: "#2a2a2a", letterSpacing: 2, textTransform: "uppercase" }}>SeatStock Badge System · Internal Draft V1 · March 2026</div>
+        <div style={{ fontSize: 10, color: "#2a2a2a", letterSpacing: 2, textTransform: "uppercase" }}>SeatStock Badge System · Internal Draft V2 · March 2026</div>
       </div>
     </div>
   );
